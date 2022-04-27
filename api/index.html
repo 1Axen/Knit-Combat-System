@@ -1,0 +1,623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
+    
+    
+      
+        <title>API - KCS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c5ef100.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9647289d.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KCS Documentation" class="md-header__button md-logo" aria-label="KCS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KCS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KCS Documentation" class="md-nav__button md-logo" aria-label="KCS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    KCS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#combatservice" class="md-nav__link">
+    CombatService
+  </a>
+  
+    <nav class="md-nav" aria-label="CombatService">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combatservicesignalsnewkill" class="md-nav__link">
+    CombatService.Signals.NewKill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatservicebindmiddlewarename-string-middleware-any-any" class="md-nav__link">
+    CombatService:BindMiddleware(Name: string, Middleware: (any) -&gt; (any))
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combatcontroller" class="md-nav__link">
+    CombatController
+  </a>
+  
+    <nav class="md-nav" aria-label="CombatController">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollergetguihandlername-string" class="md-nav__link">
+    CombatController:GetGuiHandler(Name: string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollergetsuppression" class="md-nav__link">
+    CombatController:GetSuppression()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrolleraddsuppressionamount-number" class="md-nav__link">
+    CombatController:AddSuppression(Amount: number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollersetsuppressionvalue-number" class="md-nav__link">
+    CombatController:SetSuppression(Value: number)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globalsettings" class="md-nav__link">
+    GlobalSettings
+  </a>
+  
+    <nav class="md-nav" aria-label="GlobalSettings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-values" class="md-nav__link">
+    Server Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-values" class="md-nav__link">
+    Client Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#combatservice" class="md-nav__link">
+    CombatService
+  </a>
+  
+    <nav class="md-nav" aria-label="CombatService">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combatservicesignalsnewkill" class="md-nav__link">
+    CombatService.Signals.NewKill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatservicebindmiddlewarename-string-middleware-any-any" class="md-nav__link">
+    CombatService:BindMiddleware(Name: string, Middleware: (any) -&gt; (any))
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combatcontroller" class="md-nav__link">
+    CombatController
+  </a>
+  
+    <nav class="md-nav" aria-label="CombatController">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollergetguihandlername-string" class="md-nav__link">
+    CombatController:GetGuiHandler(Name: string)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollergetsuppression" class="md-nav__link">
+    CombatController:GetSuppression()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrolleraddsuppressionamount-number" class="md-nav__link">
+    CombatController:AddSuppression(Amount: number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combatcontrollersetsuppressionvalue-number" class="md-nav__link">
+    CombatController:SetSuppression(Value: number)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globalsettings" class="md-nav__link">
+    GlobalSettings
+  </a>
+  
+    <nav class="md-nav" aria-label="GlobalSettings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-values" class="md-nav__link">
+    Server Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-values" class="md-nav__link">
+    Client Values
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="api">API</h1>
+<p>KCS provides an API that allows game developers to control the internal workings of the system</p>
+<h2 id="combatservice">CombatService</h2>
+<p>CombatService is the server sided service responsible for handling damage, reloads and everything else that replicates to clients.
+<div class="highlight"><span class="filename">Accessing CombatService from external scripts</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">local</span> <span class="n">Knit</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">).</span><span class="n">Packages</span><span class="p">.</span><span class="n">Knit</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">Knit</span><span class="p">.</span><span class="n">OnStart</span><span class="p">():</span><span class="n">await</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">local</span> <span class="n">CombatService</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;CombatService&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="combatservicesignalsnewkill">CombatService.Signals.NewKill</h3>
+<p>BindableEvent fired whenever a player kills someone
+<div class="highlight"><span class="filename">Example usage</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">local</span> <span class="n">Knit</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">).</span><span class="n">Packages</span><span class="p">.</span><span class="n">Knit</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">Knit</span><span class="p">.</span><span class="n">OnStart</span><span class="p">():</span><span class="n">await</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kd">local</span> <span class="n">CombatService</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;CombatService&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">CombatService</span><span class="p">.</span><span class="n">Signals</span><span class="p">.</span><span class="n">NewKill</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">Killer</span><span class="p">:</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Victim</span><span class="p">:</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Health</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">Tool</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">Distance</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">Headshot</span><span class="p">:</span> <span class="n">boolean</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="c1">-- Code here</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="kr">end</span>
+</code></pre></div></p>
+<h3 id="combatservicebindmiddlewarename-string-middleware-any-any">CombatService:BindMiddleware(Name: string, Middleware: (any) -&gt; (any))</h3>
+<p>Middleware allows you to connect functions to different events that will define how the service responds to data
+List of available middleware:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CanKill</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">-- Handles allowing players to damage others returns a boolean indicating wether the player can be damaged</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">CombatService</span><span class="p">:</span><span class="n">BindMiddleware</span><span class="p">(</span><span class="s2">&quot;CanKill&quot;</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">Shooter</span><span class="p">:</span> <span class="n">Player</span><span class="p">,</span> <span class="n">Victim</span><span class="p">:</span> <span class="n">Player</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="kr">return</span> <span class="n">Shooter</span><span class="p">.</span><span class="n">Team</span> <span class="o">~=</span> <span class="n">Victim</span><span class="p">.</span><span class="n">Team</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kr">end</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="combatcontroller">CombatController</h2>
+<p>CombatController is responsible for handling visual and audio replication on the client
+<div class="highlight"><span class="filename">Accessing CombatController from external scripts</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">local</span> <span class="n">Knit</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">).</span><span class="n">Packages</span><span class="p">.</span><span class="n">Knit</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Knit</span><span class="p">.</span><span class="n">OnStart</span><span class="p">():</span><span class="n">await</span><span class="p">()</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kd">local</span> <span class="n">CombatController</span> <span class="o">=</span> <span class="n">Knit</span><span class="p">.</span><span class="n">GetController</span><span class="p">(</span><span class="s2">&quot;CombatService&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="combatcontrollergetguihandlername-string">CombatController:GetGuiHandler(Name: string)</h3>
+<p>Returns the target Gui Handler</p>
+<h3 id="combatcontrollergetsuppression">CombatController:GetSuppression()</h3>
+<p>Returns the internal suppresion value (0 to 1)</p>
+<h3 id="combatcontrolleraddsuppressionamount-number">CombatController:AddSuppression(Amount: number)</h3>
+<p>Increments the internal suppresion by Value</p>
+<h3 id="combatcontrollersetsuppressionvalue-number">CombatController:SetSuppression(Value: number)</h3>
+<p>Set the internal suppresion to Value</p>
+<h2 id="globalsettings">GlobalSettings</h2>
+<p>The GlobalSettings module defines behaviour tied to client rendering and performance aswell as server sided security</p>
+<h3 id="server-values">Server Values</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">MaxPing</label><label for="__tabbed_2_2">ShootingReplication</label><label for="__tabbed_2_3">VerifyShot</label><label for="__tabbed_2_4">VerifyShotDistance</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The maximum ping allowed, players with a ping higher than this value won't be able to shoot their weapons  </p>
+</div>
+<div class="tabbed-block">
+<p>Toggles the weapon system for stuff like rallies/trainings etc.</p>
+</div>
+<div class="tabbed-block">
+<p>Toggles server shot validation through raycats</p>
+</div>
+<div class="tabbed-block">
+<p>Toggles the Anti Hitbox Expander</p>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not lower MaxPing below 800 as doing so might ruin the experience of players with unstable connections</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Security features should only be disabled for servers with more than 100 players due to making your game vulnerable to exploiters</p>
+</div>
+<h3 id="client-values">Client Values</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">ImpactRender</label><label for="__tabbed_3_2">HolsterModels</label><label for="__tabbed_3_3">MaxPlayersForBulletTrails</label><label for="__tabbed_3_4">FrustumCulling/FrustumDistance</label><label for="__tabbed_3_5">ShootingDisabled</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The distance at which impact rendering will stop</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first value represents this setting and the other two represent the min and max values that it can be changed to</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Weapon models on players characters, can be disabled for people with low end devices</p>
+</div>
+<div class="tabbed-block">
+<p>Bullet trails are automatically disabled after %MaxPlayersForBulletTrails% players are in the server in order to lower client strain during big battles</p>
+</div>
+<div class="tabbed-block">
+<p>Effects such as blood, impacts etc. that are %FrustumDistance% studs from the CAMERA won't be played if not in the CAMERA'S BOUNDS (Visible on screen)</p>
+</div>
+<div class="tabbed-block">
+<p>Allows you to disable shooting for the current client</p>
+</div>
+</div>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.748e2769.min.js"></script>
+      
+    
+  </body>
+</html>
